@@ -1,0 +1,21 @@
+{
+  "name": "rabbit-mq-node",
+  "version": "1.0.0",
+  "description": "Projeto de exemplo para uso do rabbitMq com node",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "rabbitmq:start": "npm run build && docker-compose up -d",
+    "rabbitmq:stop": "docker-compose down"
+  },
+  "author": "Guilherme AS",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.8.0"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.8.2",
+    "@types/node": "^17.0.24"
+  }
+}
